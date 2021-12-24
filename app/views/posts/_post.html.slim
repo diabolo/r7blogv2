@@ -1,7 +1,4 @@
 div id="#{dom_id(post)}"
-
-  p#notice = notice
-
   p
     strong Title:
     =< post.title
@@ -9,6 +6,9 @@ div id="#{dom_id(post)}"
   p
     strong Posted:
     =< time_tag post.created_at, "data-local": "time-ago" 
+
+  p
+    strong= pluralize post.comments.count, "comment" 
 
   p
     strong Content:
