@@ -1,0 +1,5 @@
+h3 Your comment </br>
+= form_with model: [post, Comment.new] do |f|
+  .field
+    = f.text_area :content, size: "20x5"
+  .actions = f.submit
