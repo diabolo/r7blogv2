@@ -11,6 +11,10 @@ div id="#{dom_id(post)}"
     =< time_tag post.created_at, "data-local": "time-ago" 
 
   p
+    strong Comments:
+    .comments= render post.comments
+
+  p
     strong Content:
     == post.content
 
