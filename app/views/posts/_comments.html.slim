@@ -1,4 +1,6 @@
 h2 Comments
 
-.comments= render post.comments
+/ This section must use an ID 'comments' for the turbo stream to work
+#comments= render post.comments
+
 = render "comments/new", post: post
