@@ -1,3 +1,5 @@
+/ Using dom_id(comment) to make the id is essential for a turbo stream to work.
+/ This approach should be your standard for all item partials from now on.
 div id="#{dom_id(comment)}"
   p= comment.content
   small= time_tag comment.created_at, "data-local": "time-ago"
